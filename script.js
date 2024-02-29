@@ -1,14 +1,11 @@
 let inputToDojs = document.getElementById("inputToDo");
 let boutonADDjs = document.getElementById("boutonADD");
-let i = Number(1)
 
-function setI(KeyIs){
-    testkeyIs = localStorage.getItem(KeyIs)
-    if (testkeyIs == null) {
-        localStorage.setItem(KeyIs, 1)
-    }
-    else {
-        i = localStorage.getItem(KeyIs)
+function addToListStart(){
+    for(i = 1; i <= localStorage.length; i++) {
+        let newli = document.createElement("li")
+        newli.textContent = localStorage.getItem(i)
+        document.getElementById("ListeToDo").appendChild(newli)
     }
 }
 
@@ -16,18 +13,16 @@ function addTolist(){
     boutonADDjs.addEventListener("click", function(){
         let texte = inputToDojs.value
         let newli = document.createElement('li')
-        i = i + 1
-        localStorage.setItem(i, texte)
+        key = localStorage.length + 1
+        localStorage.setItem(key, texte)
         newli.textContent = texte
         document.getElementById("ListeToDo").appendChild(newli)
     });
 }
 
 function boucle(){
-    setI()
+    addToListStart()
     addTolist()
 }
 
 boucle()
-
-

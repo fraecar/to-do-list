@@ -1,0 +1,18 @@
+* {
+    inset: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+#add {
+    margin-right: auto;
+    margin-left: auto;
+    width: max-content;
+}
+
+#ListeToDo {
+    position: relative;
+    left: 180px;
+}

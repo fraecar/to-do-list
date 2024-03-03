@@ -16,3 +16,13 @@ h1 {
     position: relative;
     left: 180px;
 }
+
+button {
+    height: 10px;
+}
+
+#add button {
+    height: 22px;
+}
+
+

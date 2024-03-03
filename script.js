@@ -1,7 +1,8 @@
 let inputToDojs = document.getElementById("inputToDo");
 let boutonADDjs = document.getElementById("boutonADD");
-let suppButtonjs = document.getElementsByClassName("suppButton")
+let suppButtonjs = document.querySelector(key.suppButton);
 
+console.log(suppButtonjs)
 function addToListStart(){
     for(i = 1; i <= localStorage.length; i++) {
         let newli = document.createElement("li")

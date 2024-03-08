@@ -10,5 +10,11 @@ body {
     margin-right: auto;
     margin-left: auto;
     width: max-content;
+    background-color: #FEFADC;
 }
 
+#add {
+    background-color: #F6D4BA;
+    height: 700px;
+    width: 800px;
+}

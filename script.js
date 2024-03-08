@@ -1,7 +1,5 @@
 let inputToDojs = document.getElementById("inputToDo")
 let boutonADDjs = document.getElementById("boutonADD")
-let test = document.getElementsByClassName("ToDo")
-console.log(test)
 
 
 function suppAllListToDo() {
@@ -25,21 +23,20 @@ function addToListStart(){
 }
 
 function addTolist(){
-    boutonADDjs.addEventListener("click", function(){
-        let texte = inputToDojs.value
-        let newli = document.createElement('li')
-        key = localStorage.length + 1
-        localStorage.setItem(key, texte)
-        newli.textContent = texte
-        newli.setAttribute("class", "ToDo")
+    let texte = inputToDojs.value
+    let newli = document.createElement('li')
+    key = localStorage.length + 1
+    if(texte == ''){
+        alert("erreur le champs de texte que vous essayé de rentrer est vide")
+    }
+    else {
+         localStorage.setItem(key, texte)
+         newli.textContent = texte
+         newli.setAttribute("class", "ToDo")
         newli.setAttribute("id", key)
         document.getElementById("ListeToDo").appendChild(newli)
-    })
+     }
 }
 
-function boucle(){
-    addToListStart()
-    addTolist()
-}
-
-boucle()
+addToListStart()
+addTolist()

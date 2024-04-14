@@ -27,7 +27,7 @@ function addTolist(){
     let newli = document.createElement('li')
     key = localStorage.length + 1
     if(texte == ''){
-        alert("erreur le champs de texte que vous essayé de rentrer est vide")
+        alert("champs de texte invalide")
     }
     else {
          localStorage.setItem(key, texte)
